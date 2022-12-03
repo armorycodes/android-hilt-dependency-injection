@@ -2,17 +2,20 @@ package com.frogobox.research.ui.detail
 
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.viewModels
 import com.frogobox.research.core.BaseBindActivity
 import com.frogobox.research.databinding.ActivityDetailBinding
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class DetailActivity : BaseBindActivity<ActivityDetailBinding>() {
 
     companion object {
         private val TAG: String = DetailActivity::class.java.simpleName
     }
 
-    private val viewModel: DetailViewModel by viewModels()
+    @Inject
+    lateinit var viewModel: DetailViewModel
 
     override fun initBinding(): ActivityDetailBinding {
         return ActivityDetailBinding.inflate(layoutInflater)

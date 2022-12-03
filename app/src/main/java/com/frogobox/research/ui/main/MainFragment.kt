@@ -5,18 +5,20 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import com.frogobox.research.core.BaseBindFragment
 import com.frogobox.research.databinding.FragmentMainBinding
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainFragment : BaseBindFragment<FragmentMainBinding>() {
 
     companion object {
         private val TAG: String = MainFragment::class.java.simpleName
     }
 
-    private val viewModel: MainViewModel by viewModels()
-
+    @Inject
+    lateinit var viewModel: MainViewModel
 
     override fun setupViewBinding(
         inflater: LayoutInflater,
