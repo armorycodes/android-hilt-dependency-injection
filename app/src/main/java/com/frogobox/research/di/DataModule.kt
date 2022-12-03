@@ -1,11 +1,14 @@
 package com.frogobox.research.di
 
+import android.content.Context
 import com.frogobox.research.data.AppPreference
 import com.frogobox.research.data.AppPreferenceImpl
 import dagger.Binds
 import dagger.Module
+import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 
 /**

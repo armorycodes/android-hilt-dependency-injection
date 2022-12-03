@@ -1,6 +1,7 @@
 package com.frogobox.research.ext
 
 import android.content.Context
+import android.util.Log
 import android.widget.Toast
 
 /**
@@ -15,4 +16,8 @@ import android.widget.Toast
 
 fun Context.showToast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+}
+
+fun showLogDebug(message: String) {
+    Log.d("LOG", message)
 }

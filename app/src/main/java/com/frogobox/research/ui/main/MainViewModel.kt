@@ -20,6 +20,6 @@ class MainViewModel @Inject constructor(
 ) : BaseViewModel() {
 
     override fun setup() {
-        Log.d("AppPreference", appPreference.getTag())
+
     }
 }

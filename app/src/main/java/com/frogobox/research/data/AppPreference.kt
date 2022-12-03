@@ -15,6 +15,28 @@ import javax.inject.Singleton
 @Singleton
 interface AppPreference {
 
-    fun getTag(): String
+    fun savePrefFloat(key: String, value: Float)
+
+    fun savePrefInt(key: String, value: Int)
+
+    fun savePrefString(key: String, value: String)
+
+    fun savePrefBoolean(key: String, value: Boolean)
+
+    fun savePrefLong(key: String, value: Long)
+
+    fun deletePref(key: String)
+
+    fun nukePref()
+
+    fun loadPrefFloat(key: String): Float
+
+    fun loadPrefString(key: String): String
+
+    fun loadPrefInt(key: String): Int
+
+    fun loadPrefLong(key: String): Long
+
+    fun loadPrefBoolean(key: String): Boolean
 
 }

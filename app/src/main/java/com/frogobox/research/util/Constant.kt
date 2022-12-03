@@ -12,6 +12,8 @@ package com.frogobox.research.util
 
 object Constant {
 
+    const val PREF_NAME = "APP_HILT_FROGOBOX"
+
     object Extra {
         const val EXTRA_DATA = "EXTRA_DATA"
     }
